@@ -1,10 +1,11 @@
 # net_quest
 net_quest is a email templater written in Python that scrapes data from a .csv file and uploads a formatted email draft to Gmail
 
-# set up venv
-python3 -m venv netquest
-source netquest/bin/activate
+# move net_quest folder to ~/bin/
 
-# start venv
-source netquest/bin/activate
+# install dependences
 pip3 install -r requirements.txt
+
+# run net_quest
+cd ~/bin/net_quest/src
+python3 net_quest.py
