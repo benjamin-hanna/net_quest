@@ -1,0 +1,45 @@
+{% extends "vision_network_template.txt" %}
+
+{% block network_name %}
+{%- if network_name == "vsp" -%}
+Janet and Mahnaz,
+{% else %}
+-missing network name-
+{%- endif -%}
+{% endblock %}
+
+{% block is_inforce %}
+{%- if is_inforce == true -%}
+We're reaching out about an inforce opportunity.
+{% else %}
+{%- endif -%}
+{% endblock %}
+
+{% block network_pricing %}
+We want to confirm that they will be able to maintain their current plan designs with VSP if they move to our MSA. See attached for plan designs; they are currently on the {{current_vision_carrier}} network.
+
+Please confirm whether this is possible, and if so, pricing.
+
+In addition, please run the following analysis using the attached the census, your standard criteria, and the attached data.
+{% endblock %}  
+
+{% block is_geo_access %}
+{%- if is_geo_access == true -%}
+GeoAccess Analysis. Please use the standard criteria and attached census.
+{% else %}
+{%- endif -%}
+{% endblock %}
+
+{% block is_disruption_analysis %}
+{%- if is_disruption_analysis == true -%}
+Provider disruption analysis. Please use the attached provider utilization file to share provider status. 
+{% else %}
+{%- endif -%}
+{% endblock %}
+
+{% block is_claims_repricing -%}
+{%- if is_claims_repricing == true -%}
+Claims repricing: Please use the attached claims utilization data from [MM/YY] to [MM/YY] to perform a claims repricing analysis. 
+{% else %}
+{%- endif -%}
+{% endblock %}

@@ -1,0 +1,27 @@
+We’re reaching out from Collective Health on behalf of {{ prospect }} and their broker, {{ broker}}, to request a preliminary stop loss proposal. Attached are the census, plan design documents, and experience. 
+ 
+Client Information
+Name of Employer: {{ prospect }}
+Address: {{ hq }}
+Name of TPA: Collective Health
+Name of Broker: {{ broker }}
+Broker Address: {{ broker_address }}
+Number of employees enrolled: {{ ees }}
+Name of Proposed Medical Network: Anthem Blue Cross or Blue Cross Blue Shield 
+
+Current Coverage
+Current Plan/Network: {{ current_med_carrier }}
+Current Funding: {{ current_medical_funding }}
+Years with Current Plan: Unknown
+Plan Start Date: {{ start_date }}
+
+Requested Coverage
+Commission: {{ commission }}
+Policy Period: {{ policy_period }}
+Specific Deductible: {{ specific_deductible }}
+Aggregate Deductible Attachment Point: {{ agg_deductible_attachment_point }}
+Services Covered: Medical and Rx
+ 
+Please provide an ETA when confirming receipt. 
+ 
+Best,

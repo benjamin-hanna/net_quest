@@ -1,0 +1,29 @@
+{% block network_name %} 
+{% endblock -%}
+
+{% block is_inforce %} 
+{% endblock %}
+
+{{prospect}} and their broker, {{broker}}, have requested a proposal from Collective Health for {{start_date}}. They have {{vision_covered_ees}} eligible employees, are currently {{current_medical_funding}} through {{current_vision_carrier}}, and are HQ'd in {{hq}}.
+
+{%- block network_pricing %}
+{% endblock -%}  
+
+{%- block is_geo_access %} 
+{% endblock -%}
+
+{%- block is_disruption_analysis %} 
+{% endblock -%}
+
+{%- block is_claims_repricing %} 
+{% endblock -%}
+
+{%- block is_transition_credits %} 
+{% endblock -%}
+
+We would like to receive the above by end of day {{due_date}}. Please let us know if there are any issues with this proposed timeline. 
+
+Feel free to reach out to us with any questions you may have. We look forward to working with you on this account. 
+
+Best,
+

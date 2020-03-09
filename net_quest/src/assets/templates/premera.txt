@@ -1,0 +1,80 @@
+{% extends "medical_network_template.txt" %}
+
+{% block network_name %}
+{% if network_name == "premera" %}
+Randy,
+{% else %}
+-missing network name-
+{% endif %}
+{% endblock %}
+
+{% block is_inforce %}
+{% if is_inforce == true %}
+We're reaching out about an inforce opportunity.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block network_pricing %}
+(1) Pricing for 2021-2023. Please confirm the following will be included in the quote:
+
+    Mature fees (including run-out claims)
+    Three-year pricing for all fees. For context, Collective Health is also providing three-year pricing with a 3% rate escalator.
+    JAA fees with all BlueCard access fees included in the quote.
+{% endblock %}
+
+{% block is_kaiser %}
+{% if is_kaiser == true %}
+    Please assume Kaiser will remain in place.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_geo_access %}
+{% if is_geo_access == true %}
+(2) GeoAccess Analysis. Please use the standard criteria and attached census.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_disruption_analysis %}
+{% if is_disruption_analysis == true %}
+(3) Provider disruption analysis. Please use the attached provider utilization file to share provider status. 
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_claims_repricing %}
+{% if is_claims_repricing == true %}
+(4) Claims repricing: Please use the attached claims utilization data from [MM/YY] to [MM/YY] to perform a claims repricing analysis. 
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_transition_credits %}
+{% if is_inforce == false and is_transition_credits == true %}
+(5) Transition credits. As {{ prospect }} and {{ broker }} explore alternative networks, they are requesting $XXX in transition credits.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_stop_loss %}
+{% if is_stop_loss == true %}
+(6) Stop Loss: Please provide ISL and ASL quotes with the following specs (data attached):
+
+    Commissions: {{ commission }}
+    Contract Basis: {{ policy_period }}
+    ISL: {{ specific_deductible }}
+    ASL: {{ agg_deductible_attachment_point }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block attachments %}
+{% if is_quote == true %}
+Attachments (3): Census (password to follow), JAA quote request form, plan designs (.zip)
+{% else %}
+{% endif %}
+{% endblock %}
+
+ 

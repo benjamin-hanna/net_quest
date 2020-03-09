@@ -1,0 +1,25 @@
+{% extends "pbm_network_template.txt" %}
+
+{% block network_name %}
+{%- if network_name == "esi" -%}
+Marisa,
+{% else %}
+-missing network name-
+{%- endif -%} 
+{% endblock %}   
+
+{% block is_inforce %}
+{%- if is_inforce == true -%}
+We're reaching out about an inforce opportunity.
+{% else %}
+{%- endif -%}
+{% endblock %}
+
+{% block is_claims_repricing %} 
+{% if is_claims_repricing == true -%}
+As part of the proposal, they have requested a claims repricing analysis for both formulary options available to CH clients through ESI (NPF and Basic Formularies). We have attached Rx claims history from XXXX.
+{% else %}
+{%- endif %}
+{% endblock %}
+
+Attachments (1): Rx Claims data
