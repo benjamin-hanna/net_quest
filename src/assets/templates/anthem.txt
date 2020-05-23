@@ -1,0 +1,94 @@
+{% extends "medical_network_template.txt" %}
+
+{% block network_name %}
+{%- if network_name == "anthem" -%}
+Anthem Team,
+{% else %}
+-missing network name-
+{%- endif -%}
+{% endblock %}
+
+{% block is_inforce %}
+{% if is_inforce == "TRUE" %}
+We're reaching out about an inforce opportunity.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block network_pricing %}
+(1) Pricing for 2021-2023. Please confirm the following will be included in the quote:
+
+    Mature fees (including run-out claims)
+    Three-year pricing for all fees. For context, Collective Health is also providing three-year pricing with a 3% rate escalator.
+    JAA fees with all BlueCard access fees included in the quote.
+{% endblock %}
+
+{% block is_kaiser %}
+{% if is_kaiser == "TRUE" %}
+    Please assume Kaiser will remain in place.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_geo_access %}
+{% if is_geo_access == "TRUE" %}
+(2) GeoAccess Analysis. Please use the standard criteria and attached census.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_disruption_analysis %}
+{% if is_disruption_analysis == "TRUE" %}
+(3) Provider disruption analysis. Please use the attached provider utilization file to share provider status. 
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_claims_repricing %}
+{% if is_claims_repricing == "TRUE" %}
+(4) Claims repricing. Please use the attached claims utilization data from [MM/YY] to [MM/YY] to perform a claims repricing analysis. 
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_zip_discount_analysis %}
+{% if is_zip_discount_analysis == "TRUE" %}
+(5) Zip-based discount analysis. Please use the zip codes available in the census file to provide average discounts for this group by geography.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_network_guarantee %}
+{% if is_network_guarantee == "TRUE" %}
+(6) Network discount guarantee. Given the group's population size, location, and switch from [Network], please provide a network discount guarantee.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_questionnaire %}
+{% if is_questionnaire == "TRUE" %}
+(7) Questionnaire. [Questions to follow tomorrow (XX/XX).] We are aiming to pre-populate as much as possible with previous answers from [CARRIER] to avoid duplicating work. Please confirm the accuracy of any pre-populated responses and fill in any gaps.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_transition_credits %}
+{% if is_inforce == "FALSE" and is_transition_credits == "TRUE" %}
+(8) Transition credits. As {{ prospect }} and {{ broker }} explore alternative networks, they are requesting $XXX in transition credits.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_stop_loss %}
+{% if is_stop_loss == "TRUE" %}
+(9) Stop Loss. Please provide ISL and ASL quotes with the following specs (data attached):
+
+    Commissions: {{ commission }}
+    Contract Basis: {{ policy_period }}
+    ISL: {{ specific_deductible }}
+    ASL: {{ agg_deductible_attachment_point }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+ 

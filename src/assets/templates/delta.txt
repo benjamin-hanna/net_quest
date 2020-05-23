@@ -1,0 +1,45 @@
+{% extends "dental_network_template.txt" %}
+
+{% block network_name %}
+{%- if network_name == "delta" -%}
+Carla,
+{% else %}
+-missing network name-
+{%- endif -%}
+{% endblock %}
+
+{% block is_inforce %}
+{% if is_inforce == "TRUE" %}
+We're reaching out about an inforce opportunity.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block network_pricing %}
+In order to evaluate moving to our combined offering, please share a proposal including the following:
+
+(1) Pricing: Using the attached plan designs and census, please share a pricing proposal for {{ start_date }}. We are awaiting confirmation of employer contribution percentage.
+{% endblock %}
+
+{% block is_geo_access %}
+{% if is_geo_access == "TRUE" %}
+(2) GeoAccess Analysis. Please use the standard criteria and attached census.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_disruption_analysis %}
+{% if is_disruption_analysis == "TRUE" %}
+(3) Provider disruption analysis. Please use the attached provider utilization file to share provider status. 
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_claims_repricing %}
+{% if is_claims_repricing == "TRUE" %}
+(4) Claims repricing: Please use the attached claims utilization data from [MM/YY] to [MM/YY] to perform a claims repricing analysis. 
+{% else %}
+{% endif %} 
+{% endblock %}
+
+Attachments (3): Dental Census, Current Plan Designs, Delta proposal request form

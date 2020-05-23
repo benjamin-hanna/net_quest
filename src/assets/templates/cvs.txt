@@ -1,0 +1,39 @@
+{% extends "pbm_network_template.txt" %}
+
+{% block network_name %}
+{%- if network_name == "cvs" -%}
+Tom,
+{% else %}
+-missing network name-
+{%- endif -%}
+{% endblock %}
+
+{% block is_inforce %}
+{%- if is_inforce == "TRUE" -%}
+We're reaching out about an inforce opportunity.
+{% else %}
+{%- endif -%}
+{% endblock %}
+
+{% block is_claims_repricing %} 
+{% if is_claims_repricing == "TRUE" -%}
+As part of the proposal, they have requested a claims repricing analysis [for both formulary options available to CH clients through CVS (opt in and opt out)]. We have attached Rx claims history from XXXX.
+{% else %}
+{%- endif %}
+{% endblock %}
+
+{% block is_disruption_analysis %} 
+{% if is_disruption_analysis == "TRUE" -%}
+As part of the proposal, they have requested a disruption analysis. Please use the attached pharmacy utilization file to share status.
+{% else %}
+{%- endif %}
+{% endblock %}
+
+{% block is_questionnaire %} 
+{% if is_questionnaire == "TRUE" -%}
+Questions to follow. We are aiming to pre-populate as much as possible with previous answers from CVS to avoid duplicating work. 
+{% else %}
+{%- endif %}
+{% endblock %}
+
+Attachments (1): Rx Claims data

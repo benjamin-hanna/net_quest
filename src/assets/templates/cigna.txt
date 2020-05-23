@@ -1,0 +1,79 @@
+{% extends "medical_network_template.txt" %}
+
+{% block network_name %}
+{% if network_name == "cigna" %}
+Dear Aaron and Blake,
+{% else %}
+-missing network name-
+{% endif %}
+{% endblock %}
+
+{% block is_inforce %}
+{% if is_inforce == "TRUE" %}
+We're reaching out about an inforce opportunity.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_geo_access %}
+{% if is_geo_access == "TRUE" %}
+(1) GeoAccess Analysis. Please use the standard criteria and attached census.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_disruption_analysis %}
+{% if is_disruption_analysis == "TRUE" %}
+(2) Provider disruption analysis. Please use the attached provider utilization file to share provider status.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_claims_repricing %}
+{% if is_claims_repricing == "TRUE" %}
+(3) Claims repricing. Please use the attached claims utilization data from [MM/YY] to [MM/YY] to perform a claims repricing analysis. 
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_zip_discount_analysis %}
+{% if is_zip_discount_analysis == "TRUE" %}
+(4) Zip-based discount analysis. Please use the zip codes available in the census file to provide average discounts for this group by geography.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_network_guarantee %}
+{% if is_network_guarantee == "TRUE" %}
+(5) Network discount guarantee. Given the group's population size, location, and switch from [Network], please provide a network discount guarantee.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_questionnaire %}
+{% if is_questionnaire == "TRUE" %}
+(6) Questionnaire. [Questions to follow tomorrow (XX/XX).] We are aiming to pre-populate as much as possible with previous answers from [CARRIER] to avoid duplicating work. Please confirm the accuracy of any pre-populated responses and fill in any gaps.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_transition_credits %}
+{% if is_inforce == "FALSE" and is_transition_credits == "TRUE" %}
+(7) Transition credits. As {{ prospect }} and {{ broker }} explore alternative networks, they are requesting $XXX in transition credits.
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block is_stop_loss %}
+{% if is_stop_loss == "TRUE" %}
+(8) Stop Loss. Please provide ISL and ASL quotes with the following specs (data attached):
+
+    Commissions: {{ commission }}
+    Contract Basis: {{ policy_period }}
+    ISL: {{ specific_deductible }}
+    ASL: {{ agg_deductible_attachment_point }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+Attachments (1): Cigna pre-sale request form. All other attachments have been uploaded to the Cigna portal.
